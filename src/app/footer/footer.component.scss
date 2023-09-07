@@ -76,6 +76,15 @@
   font-size: 12px;
   color: #fff;
  }
+ .link-font {
+  font-size: 14px;
+  color: #ffc000;
+  text-decoration: none;
+ }
+ .link-font:hover {
+  font-size: 14px;
+  color: #777;
+ }
 
  @media (min-width: 768px) {
  .footer-img {
