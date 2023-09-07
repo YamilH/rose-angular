@@ -1,0 +1,58 @@
+
+<div class="home-container">
+
+  <section class="overlay-max">
+    <div class="overlay">
+  
+      <h1 class="home-title">Piercing</h1>
+      <h3 class="home-subtitle">Razones para elegirnos</h3>
+      <p class="home-text">"En Rosario Piercing, nuestra pasión es transformar tu estilo en una obra de arte personalizada. Nos enorgullece ofrecer a la comunidad de Rosario una experiencia de piercing excepcional que combina creatividad, profesionalismo y seguridad. Con años de experiencia en el arte del piercing y un compromiso inquebrantable con los más altos estándares de higiene, nuestro equipo de expertos está listo para ayudarte a expresar tu individualidad de manera audaz y hermosa. Bienvenido a un mundo de posibilidades en Rosario Piercing, donde tu estilo se encuentra con la autenticidad, la precisión y el arte en cada perforación.".</p>
+      <br>
+      <button class="home-button" (click)="scrollToTarget()" #button>VER MÁS</button>
+  
+    </div>
+  </section>
+
+  <swiper-container
+  navigation="true"
+  paginations="true"
+  pagination-clickeabled="true"
+  >
+  <swiper-slide  #scrollTarget>
+    <img class="home-swiper" src="https://cdn-p300.americantowns.com/img/article/de-piercing-places-1.jpg" alt="working" />
+  </swiper-slide>
+  <swiper-slide>
+    <img class="home-swiper" src="https://st.depositphotos.com/1071184/60704/i/450/depositphotos_607040950-stock-photo-young-woman-getting-pierced-her.jpg" alt="working" />
+  </swiper-slide>
+  <swiper-slide>
+    <img class="home-swiper" src="https://images.news18.com/ibnlive/uploads/2022/04/untitled-1-121-16513076803x2.jpg?impolicy=website&width=510&height=356" alt="working" />
+  </swiper-slide>
+</swiper-container>
+
+<section class="hipervinculos-container">
+  <button routerLink="/about" class="hipervinculos-button">
+    Sobre mí
+  </button>
+  <button routerLink="/parts" class="hipervinculos-button">
+    Partes
+  </button>
+  <button routerLink="/piercing" class="hipervinculos-button">
+    Piercing
+  </button>
+  <button routerLink="/downsizes" class="hipervinculos-button">
+    Downsizes
+  </button>
+  <button routerLink="/consultation" class="hipervinculos-button">
+    Consultas
+  </button>
+  <button routerLink="/courses" class="hipervinculos-button">
+    Cursos
+  </button>
+  <button routerLink="/faq" class="hipervinculos-button">
+    Preguntas Frecuentes
+  </button>
+
+</section>
+
+
+</div>

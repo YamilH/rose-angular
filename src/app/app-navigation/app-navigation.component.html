@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<mat-sidenav-container class="sidenav-container">
+
+  <mat-sidenav 
+      #drawer 
+      class="sidenav" 
+      fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      >
+    <mat-toolbar color="primary">Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}" (click)="drawer.toggle()">Inicio</a>
+      <a mat-list-item routerLink="/about" routerLinkActive="active-link" (click)="drawer.toggle()">Sobre mí</a>
+      <a mat-list-item routerLink="/parts" routerLinkActive="active-link" (click)="drawer.toggle()">Partes</a>
+      <a mat-list-item routerLink="/piercing" routerLinkActive="active-link" (click)="drawer.toggle()">Piercing</a>
+      <a mat-list-item routerLink="/downsizes" routerLinkActive="active-link" (click)="drawer.toggle()">Downsizes</a>
+      <a mat-list-item routerLink="/consultation" routerLinkActive="active-link" (click)="drawer.toggle()">Consultas</a>
+      <a mat-list-item routerLink="/courses" routerLinkActive="active-link" (click)="drawer.toggle()">Cursos</a>
+      <a mat-list-item routerLink="/faq" routerLinkActive="active-link" (click)="drawer.toggle()">Preguntas Frecuentes</a>
+
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span class="nav-title">Piercing Rosario</span>
+      <span class="spacer"></span>
+      <div [class.hidden]="isHandset$ | async">
+        <a mat-button routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}" >Inicio</a>
+        <a mat-button routerLink="/about" routerLinkActive="active-link" >Sobre mí</a>
+        <a mat-button routerLink="/parts" routerLinkActive="active-link" >Partes</a>
+        <a mat-button routerLink="/piercing" routerLinkActive="active-link" >Piercing</a>
+        <a mat-button routerLink="/downsizes" routerLinkActive="active-link" >Downsizes</a>
+        <a mat-button routerLink="/consultation" routerLinkActive="active-link" >Consultas</a>
+        <a mat-button routerLink="/courses" routerLinkActive="active-link" >Cursos</a>
+        <a mat-button routerLink="/faq" routerLinkActive="active-link" >Preguntas Frecuentes</a>
+    </div>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

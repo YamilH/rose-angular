@@ -1,0 +1,50 @@
+.parts-container {
+  margin-top: 55px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  flex-direction: column;
+  background: url(../../assets/images/black-gray-background-500.jpg) top center fixed;
+}
+
+.parts-title {
+  font-size: 30px;
+  padding-top: 50px;
+  align-self: center;
+}
+
+.parts-sketch {
+  max-width: 60%;
+  margin-bottom: 10px;
+}
+
+.parts-separator {
+  padding: 100px 0px;
+}
+
+.example-tree-invisible {
+  display: none;
+}
+
+.example-tree ul,
+.example-tree li {
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+}
+
+/*
+ * This padding sets alignment of the nested nodes.
+ */
+.example-tree .mat-nested-tree-node div[role=group] {
+  padding-left: 40px;
+}
+
+/*
+ * Padding for leaf nodes.
+ * Leaf nodes need to have padding so as to align with other non-leaf nodes
+ * under the same parent.
+ */
+.example-tree div[role=group] > .mat-tree-node {
+  padding-left: 40px;
+}
