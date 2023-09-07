@@ -55,4 +55,4 @@ https://rose-angular.vercel.app/
 
 ## Conclusion
 
-Piercing Rosario was a fun project to learn more about Angular. I'm happy to share it with others.
+Piercing Rosario was a fun project to learn more about Angular, it was the first time using SASS too. I'm happy to share it with others.
