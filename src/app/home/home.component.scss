@@ -7,6 +7,7 @@
   align-items: center;
   text-align: center;
   background: url(../../assets/images/black-gray-background-500.jpg) top center fixed;
+	overflow-x: hidden;
 }
 
 .home-swiper {
@@ -26,7 +27,7 @@ swiper-container::part(button-next) {
 .overlay-max {
 	background: url('http://www.autodatz.com/wp-content/uploads/2017/05/Old-Car-Wallpapers-Hd-36-with-Old-Car-Wallpapers-Hd.jpg');
 	text-align: center;
-	width: 100%;
+	width: 100vw;
 	height: auto;
   margin-bottom: 60px;
 	background-size: cover;
@@ -35,14 +36,28 @@ swiper-container::part(button-next) {
 	overflow: hidden;
   border-radius: 0 0 75% 75% / 10%;
 }
-.overlay{
+.overlay2{
 	width: 100%;
 	height: 100%;
-  padding: 60px 0px;
+  padding: 0px 0px;
 	color: #FFF;
 	text-shadow: 1px 1px 1px #333;
-  background-image: linear-gradient( 180deg, #c2185b 10%, #fd5e086b 100%);
+  background: radial-gradient(ellipse at center, #c2185b 10%, transparent 70%);
 	
+}
+
+.full-height-video {
+  width: 100vw;
+  height: 440px;
+}
+
+.full-width-video {
+  width: 100vw;
+  height: auto;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .home-title {
@@ -89,7 +104,7 @@ swiper-container::part(button-next) {
 }
 
 .hipervinculos-button{
-	height: 200px;
+	height: 60px;
 	min-width: 300px;
 	// background-color: #c2185b;
 	color: #fff;
@@ -134,3 +149,52 @@ swiper-container::part(button-next) {
     border-radius: 0 0 85% 85% / 30%;
   }
  }
+
+
+ .home-title b{
+  color: #fee;
+  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #c2185b, 0 0 0.5em #c2185b, 0 0 0.1em #c2185b, 0 10px 3px #000;
+  z-index: 15;
+}
+.home-title b span{
+  animation: blink linear infinite 2s;
+  z-index: 15;
+}
+.home-title b span:nth-of-type(2){
+  animation: blink linear infinite 3s;
+  z-index: 15;
+}
+
+@keyframes blink {
+  78% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  79%{
+     color: #333;
+  }
+  80% {
+    
+    text-shadow: none;
+  }
+  81% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  82% {
+    color: #333;
+    text-shadow: none;
+  }
+  83% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+  92% {
+    color: #333;
+    text-shadow: none;
+  }
+  92.5% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+}
